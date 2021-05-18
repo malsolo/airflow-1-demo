@@ -1,8 +1,9 @@
 version: '2.1'
 services:
 
+
   postgres:
-    build: ./docker/postgres
+    build: docker/postgres
     image: malsolo/postgres
     restart: always
     container_name: airflow-postgres
@@ -18,8 +19,10 @@ services:
       interval: 10s
       retries: 10
 
+
+
   airflow:
-    build: ./docker/airflow
+    build: docker/airflow
     image: malsolo/airflow
     restart: always
     container_name: airflow-airflow
