@@ -52,7 +52,7 @@ def store_in_db(*args, **kwargs):
 
     transformed_invoices.dropna(axis=0, how='any', inplace=True)
     engine = create_engine(
-        'postgresql://airflow:airflow@postgres/pluralsight')
+        'postgresql://airflow:airflow@postgres/malsolo')
 
     transformed_invoices.to_sql("invoices",
                                 engine,
@@ -95,7 +95,7 @@ with DAG(dag_id = "invoices_dag",
                 country VARCHAR (50) NOT NULL
                 );''',
         postgres_conn_id='postgres',
-        database='pluralsight'
+        database='malsolo'
     )
 
     
