@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Airflow working directories
+logs/dag_processor_manager
+logs/first_dag
+logs/tutorial
+logs/scheduler
+logs/scheduler/latest
+
